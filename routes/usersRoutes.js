@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 
 const {login, register, data} = require("../controllers/usersControlers")
-const {protect} = require("../middleware/authMiddleware")
+const {protect} = require("../middleware/errorMiddleware")
 
 //endpoint publico
 router.post("/login", login)

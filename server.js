@@ -5,8 +5,11 @@ const app = express();
 const connectDB = require("./config/db");
 const {errorHandler} = require("./middleware/errorMiddleware");
 const colors= require("colors");
+const cors = require("cors");
 
 connectDB();
+
+app.use(cors());
 
 
 app.use(express.json());
